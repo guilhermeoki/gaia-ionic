@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.gaiaionic628275" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>gaia-ionic</name>
+<widget id="com.ageis20161.gaiaionic" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Gaia</name>
   <description>
         An Ionic Framework and Cordova project.
     </description>
@@ -16,7 +16,28 @@
   <preference name="FadeSplashScreenDuration" value="2000"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+  <platform name="android">
+    <icon src="www/img/logo.png" density="ldpi"/>
+    <icon src="www/img/logo.png" density="mdpi"/>
+    <icon src="www/img/logo.png" density="hdpi"/>
+    <icon src="www/img/logo.png" density="xhdpi"/>
+    <icon src="www/img/logo.png" density="xxhdpi"/>
+    <icon src="www/img/logo.png" density="xxxhdpi"/>
+    <splash src="www/img/logo.png" density="land-ldpi"/>
+    <splash src="www/img/logo.png" density="land-mdpi"/>
+    <splash src="www/img/logo.png" density="land-hdpi"/>
+    <splash src="www/img/logo.png" density="land-xhdpi"/>
+    <splash src="www/img/logo.png" density="land-xxhdpi"/>
+    <splash src="www/img/logo.png" density="land-xxxhdpi"/>
+    <splash src="www/img/logo.png" density="port-ldpi"/>
+    <splash src="www/img/logo.png" density="port-mdpi"/>
+    <splash src="www/img/logo.png" density="port-hdpi"/>
+    <splash src="www/img/logo.png" density="port-xhdpi"/>
+    <splash src="www/img/logo.png" density="port-xxhdpi"/>
+    <splash src="www/img/logo.png" density="port-xxxhdpi"/>
+  </platform>
 </widget>
