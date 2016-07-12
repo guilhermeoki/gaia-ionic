@@ -26,17 +26,26 @@ app.run(function($ionicPlatform) {
 app.controller("GaiaController", function($scope, $cordovaLocalNotification, $ionicPlatform) {
      
     $ionicPlatform.ready(function () {
-        $scope.notifyMe = function () {
-          $cordovaLocalNotification.schedule({
-            id: 3,
-            title: 'Gaia',
-            text: 'Ei! Não se esqueça de regar seu alecrim !!! ;)',
-            every: 'day',
-            icon: 'file://assets/www/img/logo.png'
-          }).then(function (result) {
-            console.log('Notificação lançada');
-          });
-        };      
+
+      notificationId = '09384274961378216';
+
+      $cordovaLocalNotification.isScheduled(notificationId).then(function(isScheduled) {
+        console.log("Já está sendo observado? R:"+isScheduled);
+        $scope.assisted = isScheduled; //not working
+      });
+
+      $scope.notifyMe = function () {
+        $cordovaLocalNotification.schedule({
+          id: notificationId,
+          title: 'Gaia',
+          text: 'Ei! Não se esqueça de regar seu alecrim !!! ;)',
+          every: 'minute',
+          icon: 'file://assets/www/img/logo.png'
+        }).then(function (result) {
+          console.log('Notificação lançada');
+          $scope.assisted = true;
+        });
+      };      
          
         // $scope.updateSingleNotification = function () {
         //   $cordovaLocalNotification.update({

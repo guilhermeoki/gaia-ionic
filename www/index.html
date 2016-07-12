@@ -63,8 +63,11 @@
             </div>
 
             <div class="row center">
-                <div class="col s12 ">
+                <div class="col s12" ng-if="assisted == false">
                     <a class="waves-effect waves-light btn-large brown darken-1" ng-click="notifyMe()">Começar agora</a>
+                </div>
+                <div class="col s12" ng-if="assisted == true">
+                    <a class="waves-effect waves-light green-text darken-1">Já estamos observando seu alecrim!</a>
                 </div>
             </div>
         </div>
