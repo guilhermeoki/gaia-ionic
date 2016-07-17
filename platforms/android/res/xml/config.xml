@@ -31,10 +31,10 @@
     <splash density="port-xxxhdpi" src="www/img/logo.png" />
     <name>Gaia</name>
     <description>
-        An Ionic Framework and Cordova project.
+        Gaia - Melhore seu plantio
     </description>
-    <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
+    <author email="renan.hbarbieri@gmail.com" href="http://renanbarbieri.com.br/">
+      Renan Barbieri
     </author>
     <content src="index.html" />
     <access origin="*" />

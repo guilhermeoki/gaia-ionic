@@ -31,7 +31,7 @@ app.controller("GaiaController", function($scope, $cordovaLocalNotification, $io
 
       $cordovaLocalNotification.isScheduled(notificationId).then(function(isScheduled) {
         console.log("Já está sendo observado? R:"+isScheduled);
-        $scope.assisted = isScheduled;
+        $scope.assisted = isScheduled; //not working
       });
 
       $scope.notifyMe = function () {

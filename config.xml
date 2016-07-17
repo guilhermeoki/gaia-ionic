@@ -2,10 +2,10 @@
 <widget id="com.ageis20161.gaiaionic" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Gaia</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Gaia - Melhore seu plantio
     </description>
-  <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
+  <author email="renan.hbarbieri@gmail.com" href="http://renanbarbieri.com.br/">
+      Renan Barbieri
     </author>
   <content src="index.html"/>
   <access origin="*"/>
