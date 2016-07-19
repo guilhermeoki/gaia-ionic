@@ -39,7 +39,7 @@ app.controller("GaiaController", function($scope, $cordovaLocalNotification, $io
           id: notificationId,
           title: 'Gaia',
           text: 'Ei! Não se esqueça de regar seu alecrim !!! ;)',
-          every: 'minute',
+          every: 'day',
           icon: 'file://assets/www/img/logo.png'
         }).then(function (result) {
           console.log('Notificação lançada');
