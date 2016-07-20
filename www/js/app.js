@@ -29,10 +29,17 @@ app.controller("GaiaController", function($scope, $cordovaLocalNotification, $io
 
       notificationId = '09384274961378216';
 
-      $cordovaLocalNotification.isScheduled(notificationId).then(function(isScheduled) {
-        console.log("Já está sendo observado? R:"+isScheduled);
-        $scope.assisted = isScheduled; //not working
-      });
+      console.log(window.localStorage.getItem('assisted'));
+
+      if(window.localStorage.getItem('assisted')==null || (window.localStorage.getItem('assisted')==false)){
+        $scope.assisted = false;
+        console.log("não assistido");
+        window.localStorage.setItem('assisted', false);
+      }
+      else{
+        console.log("já aviso");
+        $scope.assisted = true;
+      }
 
       $scope.notifyMe = function () {
         $cordovaLocalNotification.schedule({
@@ -44,24 +51,8 @@ app.controller("GaiaController", function($scope, $cordovaLocalNotification, $io
         }).then(function (result) {
           console.log('Notificação lançada');
           $scope.assisted = true;
+          window.localStorage.setItem('assisted', true);
         });
-      };      
-         
-        // $scope.updateSingleNotification = function () {
-        //   $cordovaLocalNotification.update({
-        //     id: 2,
-        //     title: 'Warning Update',
-        //     text: 'This is updated text!'
-        //   }).then(function (result) {
-        //     console.log('Notification 1 Updated');
-        //   });
-        // };  
- 
-        // $scope.cancelSingleNotification = function () {
-        //   $cordovaLocalNotification.cancel(3).then(function (result) {
-        //     console.log('Notification 3 Canceled');
-        //   });
-        // };      
-         
+      }; 
     });
 });
